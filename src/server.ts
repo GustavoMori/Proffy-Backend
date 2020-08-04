@@ -1,14 +1,10 @@
 import express from 'express';
 
 const app = express();
+app.use(express.json());
 
-app.get('/users', (request, response) => {
-    const users = [
-        { name: "Gustavo", age: 26 },
-        { name: "Deborah", age: 24},
-    ];
-
-    return response.json(users);
+app.get('/', (request, response) => {
+    return response.json({ message: 'Hello World'});
 });
 // www.minhapi.com.br:3333
 // default = 80
