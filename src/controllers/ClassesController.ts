@@ -10,6 +10,7 @@ interface ScheduleItem {
 
 export default class ClassesController {
 
+   //REQUEST RESPONSE
     async index(request: Request, response: Response){
         const filters = request.query;
         const subject = filters.subject as string;
